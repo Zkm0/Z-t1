@@ -1,4 +1,4 @@
-// Define the produce prices
+
 const producePrices = {
     tomatoes: 3,
     cucumbers: 2,
@@ -8,12 +8,12 @@ const producePrices = {
     cauliflower: 3
   };
   
-  // Define the cart array to store the produce objects
+  
   let cart = [];
   
-  // Define the addProduce function
+  
   function addProduce() {
-    // Get the form inputs
+  
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const phone = document.getElementById("phone").value;
@@ -61,7 +61,7 @@ const producePrices = {
     }
   });
   
-  // Part of Version 2. 
+  // 4th page function (Version 2). 
   function fourthPageFunction() {
     
   }
