@@ -2,23 +2,76 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>starter code</title>
-<link rel="stylesheet" type="text/css" href="site.css">
+  <meta charset="utf-8">
+  <title>Organic Produce Shop</title>
+  <link rel="stylesheet" type="text/css" href="site.css">
 </head>
 
 <body>
-<h2>starter project</h2>
-<img src="https://www.dogandpuptown.com/wp-content/uploads/2018/11/Labrador-Puppies-1217.jpg" alt="Cute Labrador in the snow">
-<br>
-<button type="button" id="button1">Button</button>
-<div>
-    <br />
-    <input type="text" val="starting value" text="hello" id="textbox1" />
-    <br />
-</div>
+    
+  <h1>Welcome to Organic Produce Shop</h1>
+  <p>We sell fresh organic produce at affordable prices.</p>
 
-<script src="main.js"></script>
+  <hr>
+
+    <h2>Buy Now</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name"><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"><br><br>
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone"><br><br>
+
+      <h2>Our Produce</h2>
+<ul>
+  <li>Tomatoes ($3/ounce)</li>
+  <li>Cucumbers ($2/ounce)</li>
+  <li>Cabbages ($5/ounce)</li>
+  <li>Carrots ($1/ounce)</li>
+  <li>Broccoli ($4/ounce)</li>
+  <li>Cauliflower ($3/ounce)</li>
+</ul>
+      <label for="produce">Select Produce:</label>
+      <select id="produce" name="produce">
+        <option value="tomatoes">Tomatoes </option>
+        <option value="cucumbers">Cucumbers </option>
+        <option value="cabbages">Cabbages </option>
+        <option value="carrots">Carrots </option>
+        <option value="broccoli">Broccoli </option>
+        <option value="cauliflower">Cauliflower </option>
+      </select><br><br>
+      <label for="quantity">Quantity (in ounces):</label>
+      <input type="number" id="quantity" name="quantity" min="1"><br><br>
+      <button type="button" onclick="addProduce()">Add to Cart</button>
+    </form>
+    
+  </section>
+
+  <hr>
+
+  <section id="cart">
+    <h2>Cart</h2>
+    <ul id="cart-list"></ul>
+    <button type="button" onclick="emptyCart()">Empty Cart</button>
+
+  </section>
+
+  <hr>
+
+    <h2>Checkout</h2>
+    <form>
+      <label for="card-number">Card Number:</label>
+      <input type="text" id="card-number" name="card-number"><br><br>
+      <label for="expiry-date">Expiry Date:</label>
+      <input type="text" id="expiry-date" name="expiry-date"><br><br>
+      <label for="cvv">CVV:</label>
+      <input type="text" id="cvv" name="cvv"><br><br>
+      <button type="button" onclick="processPayment()">Process Payment</button>
+    </form>
+  </section>
+
+  <script src="main.js"></script>
 </body>
 
 </html>
